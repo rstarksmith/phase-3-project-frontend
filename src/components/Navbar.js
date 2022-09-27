@@ -12,7 +12,7 @@ const Navbar = () => {
                     <div className="menu">
                         <NavLink exact to="/">Home</NavLink>
                         <NavLink exact to="/collectors">Collections</NavLink>
-                        <NavLink to="/resources">Vinyl Grading</NavLink>
+                        <NavLink to="/vinylgrade">Vinyl Grading</NavLink>
                     </div>
                 </ul>
         </nav>

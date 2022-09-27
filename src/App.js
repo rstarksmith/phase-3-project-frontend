@@ -13,7 +13,7 @@ function App() {
         <Route exact path="/" element={<Home />} />
         <Route exact path="/collectors" element={<CollectorList />} />
         <Route path="/collectors/:id" element={<CollectorPage />} />
-        <Route exact path="/vinylgrade " element={<VinylGrade />} />
+        <Route path="/vinylgrade" element={<VinylGrade />} />
       </Routes>
     </>
   )
