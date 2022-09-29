@@ -5,7 +5,7 @@ const Navbar = () => {
         <nav className="navbar" >
             <img 
                 src='https://i.imgur.com/tLdkxvn.png?1' 
-                alt='lego list logo' 
+                alt='fox vinyl logo' 
                 className="logo"
             />
                 <ul className="nav-links">
