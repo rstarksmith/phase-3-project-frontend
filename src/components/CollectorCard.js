@@ -1,15 +1,17 @@
+import { useNavigate } from 'react-router-dom'
 
 
 const CollectorCard = ({ collector }) => {
-    
+    const navigate = useNavigate()
+
     return (
         <div>
             <div className="card">
-            <div className='image-container'>
-            </div>    
-            <div className="container">
-                <h2 className='set-name'>{collector.name}</h2>
-            </div>
+                <div className='image-container'>
+                </div>    
+                <div className="container">
+                    <button onClick={() => navigate(`/collectors/${collector.id}`)} >{collector.name}</button>
+                </div>
             </div>
         </div>
     )

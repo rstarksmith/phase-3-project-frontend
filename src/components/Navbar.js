@@ -4,7 +4,7 @@ const Navbar = () => {
     return (
         <nav className="navbar" >
             <img 
-                src='https://i.imgur.com/tLdkxvn.png?1' 
+                src='https://i.imgur.com/t' 
                 alt='fox vinyl logo' 
                 className="logo"
             />

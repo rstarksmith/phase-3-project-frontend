@@ -1,8 +1,13 @@
 
 
 const CollectorPage = () => {
+
     return (
-        <div>CollectorPage</div>
+        <div>
+            <h2>Collector name</h2>
+            <button>add record</button>
+            <p>display the records</p>   
+        </div>
     )
 }
 

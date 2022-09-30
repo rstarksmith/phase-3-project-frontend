@@ -4,6 +4,8 @@ import CollectorForm from "./CollectorForm"
 
 const CollectorsList = () => {
     const [collectors, setCollectors] = useState([])
+    const [showForm, setShowForm] = useState(false)
+    const [theCollector, setTheCollector] = useState({})
 
     useEffect(() => {
         fetch('http://localhost:9292/collectors')
@@ -11,15 +13,25 @@ const CollectorsList = () => {
         .then(data => setCollectors(data))
     }, [])
 
-    const collections = collectors.map(collector => <CollectorCard key={collector.id} collector={collector} />)
+    const handleAddCollector = (newCollector) => {
+        setCollectors([...collectors, newCollector])
+    }
+
+    const collections = collectors.map(c => <CollectorCard key={c.id} collector={c} />)
+
+    const showCollectorForm = () =>
+        setShowForm(true)
 
     return (
         <div>
             <div>
-                {collections}
+                <p>an image will go here</p>
             </div>
             <div>
-                <button>add collector</button>
+                {showForm ? <CollectorForm handleAddCollector={handleAddCollector}/> : <button onClick={showCollectorForm} className="list-bttn">New Collector</button>}
+            </div>
+            <div>
+                {collections}
             </div>
         </div>
     )

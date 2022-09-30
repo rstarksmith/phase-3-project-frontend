@@ -36,3 +36,24 @@ nav a.active {
 .menu li {
     padding: 5px 14px;
 }
+
+/* CollectorList*/
+
+.list-bttn {
+    
+}
+
+
+/* CollectorCard*/
+.card {
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 15px 15px;
+    transition: 0.3s;
+    width: 300px;
+}
+
+.card-bttn {
+    
+}
