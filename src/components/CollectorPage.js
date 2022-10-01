@@ -1,18 +1,22 @@
-// import { useState } from 'react'
+import { useState } from 'react'
 import Record from "./Record"
+import RecordForm from './RecordForm'
 
 const CollectorPage = ({ collector }) => {
+    const[recordForm, setRecordForm] = useState(false)
     // const[records, setRecords] = useState([])
 
     // const displayRecords = collectors.map(collector => {
     //     return(records.map(record => <Record key={record.id} record={record} />)
     //     )})
-    
+    const showRecordForm = () => {
+        setRecordForm(true)
+    }
 
     return (
         <div>
             <h2>{collector}</h2>
-            <button>add record</button>
+            {recordForm ? <RecordForm /> : <button onClick={showRecordForm} className="bttn">Add Record</button>}
             {/* <div>{displayRecords}</div> */}
             <button>Delete Collection</button>
         </div>
