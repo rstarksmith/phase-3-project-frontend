@@ -7,30 +7,35 @@
     color: #fff;
     display: flex;
     justify-content: space-between;
-    padding: 20px;
+    padding: 10px;
 }
 
 .nav-links a {
     color: rgb(4, 4, 4);
     padding: 20px;
+    text-decoration: none;
 }
 
 nav a.active {
-    background-color: rgba(193, 153, 94, 0.923);
+    background-color: rgba(246, 246, 246, 0.943);
     border-radius: 5px;
 }
 
 /* LOGO */
 .logo {
-    margin: 0px 0px 0px 10px;
-    width: 175px;
+    margin: 0px 0px 0px -10px;
+    width: 250px;
 }
 
 /* NAVBAR MENU */
 .menu {
     display: flex;
-    font-size: 18px;
-    gap: 1em;
+    font-size: 16px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    gap: 4em;
+    margin-top: 40px;
+    text-transform: uppercase;
+
 }
 
 .menu li {

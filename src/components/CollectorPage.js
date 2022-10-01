@@ -1,12 +1,20 @@
+// import { useState } from 'react'
+import Record from "./Record"
 
+const CollectorPage = ({ collector }) => {
+    // const[records, setRecords] = useState([])
 
-const CollectorPage = () => {
+    // const displayRecords = collectors.map(collector => {
+    //     return(records.map(record => <Record key={record.id} record={record} />)
+    //     )})
+    
 
     return (
         <div>
-            <h2>Collector name</h2>
+            <h2>{collector}</h2>
             <button>add record</button>
-            <p>display the records</p>   
+            {/* <div>{displayRecords}</div> */}
+            <button>Delete Collection</button>
         </div>
     )
 }

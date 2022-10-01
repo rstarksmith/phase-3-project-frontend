@@ -10,7 +10,7 @@ const CollectorCard = ({ collector }) => {
                 <div className='image-container'>
                 </div>    
                 <div className="container">
-                    <button onClick={() => navigate(`/collectors/${collector.id}`)} >{collector.name}</button>
+                    <button collector={collector} onClick={() => navigate(`/collectors/${collector.id}`)} >{collector.name}</button>
                 </div>
             </div>
         </div>

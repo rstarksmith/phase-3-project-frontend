@@ -4,7 +4,7 @@ const Navbar = () => {
     return (
         <nav className="navbar" >
             <img 
-                src='https://i.imgur.com/t' 
+                src='https://i.imgur.com/bq9puG5.png?1' 
                 alt='fox vinyl logo' 
                 className="logo"
             />
@@ -20,3 +20,4 @@ const Navbar = () => {
 }
 
 export default Navbar
+
