@@ -35,7 +35,7 @@ const CollectorForm = ({ handleAddCollector }) => {
                         value={name}
                         placeholder='Name...'
                     />
-                    <button type='submit'>Create new account</button>
+                    <button className='bttn' type='submit'>Create new account</button>
                 </form>
                 <p>Once you create your account click on your name to add records</p>
             </div>

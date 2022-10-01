@@ -19,10 +19,11 @@ const CollectorsList = ({ collectors, handleAddCollector }) => {
     return (
         <div>
             <div>
+                {/* <img src=""/> */}
                 <p>an image will go here</p>
             </div>
             <div>
-                {showForm ? <CollectorForm handleAddCollector={handleAddCollector}/> : <button onClick={showCollectorForm} className="list-bttn">New Collector</button>}
+                {showForm ? <CollectorForm handleAddCollector={handleAddCollector}/> : <button onClick={showCollectorForm} className="bttn">New Collector</button>}
             </div>
             <div>
                 {collections}

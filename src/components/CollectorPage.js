@@ -18,7 +18,8 @@ const CollectorPage = ({ collector }) => {
             <h2>{collector}</h2>
             {recordForm ? <RecordForm /> : <button onClick={showRecordForm} className="bttn">Add Record</button>}
             {/* <div>{displayRecords}</div> */}
-            <button>Delete Collection</button>
+            <br/>
+            <button className='bttn'>Delete Collection</button>
         </div>
     )
 }

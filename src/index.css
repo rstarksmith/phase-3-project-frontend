@@ -1,4 +1,7 @@
-
+body {
+    background-color: rgb(255, 255, 255);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
 
 /* NavBar*/
 .navbar {
@@ -32,7 +35,7 @@ nav a.active {
     display: flex;
     font-size: 16px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    gap: 4em;
+    gap: 7em;
     margin-top: 40px;
     text-transform: uppercase;
 
@@ -44,19 +47,39 @@ nav a.active {
 
 /* CollectorList*/
 
-.list-bttn {
+.bttn {
+    background-color: rgb(0, 0, 0);
+    border-radius: 5px;
+    color:rgb(255, 255, 255);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;  
+    font-size: 16px;
+    padding: 10px;
+}
+
+.bttn:hover {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    transition: .7s;
     
 }
 
 
 /* CollectorCard*/
 .card {
-    background-color: rgb(255, 255, 255);
-    border-radius: 20px;
+    background-color: rgb(245, 241, 241);
+    border-radius: 15px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     margin: 15px 15px;
+    padding: 20px;
+    text-align: center;
     transition: 0.3s;
     width: 300px;
+}
+
+.card:hover {
+    cursor: pointer;
 }
 
 .card-bttn {

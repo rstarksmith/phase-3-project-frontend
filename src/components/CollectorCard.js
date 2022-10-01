@@ -6,11 +6,11 @@ const CollectorCard = ({ collector }) => {
 
     return (
         <div>
-            <div className="card">
+            <div className="card" onClick={() => navigate(`/collectors/${collector.id}`)} >
                 <div className='image-container'>
                 </div>    
                 <div className="container">
-                    <button collector={collector} onClick={() => navigate(`/collectors/${collector.id}`)} >{collector.name}</button>
+                    <h3>{collector.name}</h3>
                 </div>
             </div>
         </div>
