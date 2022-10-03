@@ -30,7 +30,7 @@ const CollectorForm = ({ handleAddCollector }) => {
             <div>
                 <form onSubmit={addCollector}>
                     <input
-                        className='form-input'
+                        className='input'
                         onChange={(e) => setName(e.target.value)}
                         value={name}
                         placeholder='Name...'

@@ -1,10 +1,10 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Record from "./Record"
 import RecordForm from './RecordForm'
 
-const CollectorPage = ({ collector }) => {
+const CollectorPage = () => {
     const[recordForm, setRecordForm] = useState(false)
-    // const[records, setRecords] = useState([])
+
 
     // const displayRecords = collectors.map(collector => {
     //     return(records.map(record => <Record key={record.id} record={record} />)
@@ -15,9 +15,10 @@ const CollectorPage = ({ collector }) => {
 
     return (
         <div>
-            <h2>{collector}</h2>
+            <h2>hello</h2>
+            <div>
             {recordForm ? <RecordForm /> : <button onClick={showRecordForm} className="bttn">Add Record</button>}
-            {/* <div>{displayRecords}</div> */}
+            </div>
             <br/>
             <button className='bttn'>Delete Collection</button>
         </div>

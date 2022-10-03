@@ -1,5 +1,4 @@
-import { useState, useEffect } from "react"
-import CollectorCard from "./CollectorCard"
+import { useState } from "react"
 import CollectorForm from "./CollectorForm"
 
 const CollectorsList = ({ collectors, handleAddCollector }) => {
@@ -7,14 +6,17 @@ const CollectorsList = ({ collectors, handleAddCollector }) => {
     // const [theCollector, setTheCollector] = useState({})
 
 
-    const handleCollectorView = () => {
-        fetch()
-    }
 
-    const collections = collectors.map(c => <CollectorCard key={c.id} collector={c} />)
+    const collections = collectors.map(collector => {
+        return(
+            <div key={collector.id}>
+                <button className="card-bttn">{collector.name}</button>
+            </div>
+            )
+        })
 
     const showCollectorForm = () =>
-        setShowForm(true)
+        setShowForm(true)               
 
     return (
         <div>
