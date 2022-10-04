@@ -128,3 +128,20 @@ nav a.active {
 .image-container {
     height: 350px
 }
+
+.record-bttn {
+    background-color: rgb(0, 0, 0);
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 12px;
+    margin-inline: 10px;
+    padding: 5px;
+}
+    
+.record-bttn:hover {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    transition: .7s;
+}

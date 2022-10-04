@@ -1,6 +1,10 @@
 
 
-const Record = ({ record }) => {
+const Record = ({ record, handleDeleteRecord }) => {
+
+    const deleteRecord = () => {
+        handleDeleteRecord()
+    }
 
     return (
         <div className="card">
@@ -14,7 +18,8 @@ const Record = ({ record }) => {
                 <h6>Label: {record.label} - Format: {record.format}</h6>
                 <h6>Year: {record.year}</h6>
             </div>
-            <button className="record-bttn">Delete Record</button>
+            <button className="record-bttn">Edit</button>
+            <button onClick={deleteRecord} className="record-bttn">Delete</button>
         </div>
     )
 }

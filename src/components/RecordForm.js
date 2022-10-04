@@ -1,62 +1,97 @@
 import { useState } from "react"
 
 
-const RecordForm = () => {
+const RecordForm = ({ collector }) => {
     const[formData, setFormData] = useState({
-        }
-    )
+        artist: '',
+        title: '',
+        format: '',
+        media_condition: '',
+        sleeve_condition: '',
+        label: '',
+        year: 0,
+        collector_id: collector.id,
+        image: ''
+    })
+
+    
+    const addRecord = (e) => {
+        e.preventDefault()
+    }
 
     
     return (
         <div>
-            this is the Record form
-            {/* <form onSubmit={handleNewSet}>
+            <p>Add a record to your collection: </p>
+            <form onSubmit={addRecord}>
                 <input 
                     className='input' 
+                    name="artist"
                     type="text" 
-                    onChange={(e) => setArtist(e.target.value)} 
-                    value={artist} 
+                    onChange={(e) => setFormData(e.target.value)} 
+                    value={formData.artist} 
                     placeholder="Artist..." 
                 /><br/><br/>
                 <input 
                     className='input' 
                     type="text" 
-                    onChange={(e) => setTitle(e.target.value)} 
-                    value={title} 
+                    onChange={(e) => setFormData(e.target.value)} 
+                    value={formData.title} 
                     placeholder="Title..." 
                 /><br/><br/>
                 <input 
                     className='input' 
                     type="text" 
-                    onChange={(e) => setImage(e.target.value)} 
-                    value={image} 
+                    onChange={(e) => setFormData(e.target.value)} 
+                    value={formData.image} 
                     placeholder="Image URL..." 
                 /><br/><br/>
                 <input 
                     className='input' 
                     type="text" 
-                    onChange={(e) => setLabel(e.target.value)} 
-                    value={label}
+                    onChange={(e) => setFormData(e.target.value)} 
+                    value={formData.label}
                     placeholder="Label..." 
                 /><br/><br/>
                 <input 
                     className='input' 
                     type="text" 
-                    // onChange={(e) => setYear(e.target.value)} 
-                    // value={year}
+                    onChange={(e) => setFormData(e.target.value)} 
+                    value={formData.year}
                     placeholder="Year..." 
-                /><br/><br/> */}
-                {/* <select onChange={(e) => setMedia(e.target.value)}> */}
-                    {/* <option>Mint (M)</option>
+                /><br/><br/> 
+                <label>Media Condition: </label>
+                <select className='input' onChange={(e) => setFormData(e.target.value)}>
+                    <option>Mint (M)</option>
                     <option>Near Mint (NM)</option>
                     <option>Excellent (E)</option>
                     <option>Very Good Plus (VG+)</option>
                     <option>Very Good (VG)</option>
                     <option>Good (G)</option>
                     <option>Fair (F)</option>
-                </select> */}
-            {/* <button className='home-bttn' type="submit">Add Record</button>
-            </form> */}
+                </select>
+                <br/><br/> 
+                <label>Sleeve Condition: </label>
+                <select className='input' onChange={(e) => setFormData(e.target.value)}>
+                    <option>Mint (M)</option>
+                    <option>Near Mint (NM)</option>
+                    <option>Excellent (E)</option>
+                    <option>Very Good Plus (VG+)</option>
+                    <option>Very Good (VG)</option>
+                    <option>Good (G)</option>
+                    <option>Fair (F)</option>
+                </select>
+                <br/><br/> 
+                <label>Format: </label>
+                <select className='input' onChange={(e) => setFormData(e.target.value)}>
+                    <option>Mint (M)</option>
+                    <option>Near Mint (NM)</option>
+                    <option>Excellent (E)</option>
+                    <option>Very Good Plus (VG+)</option>
+                </select>
+                <br/><br/> 
+                <button className='bttn' type="submit">Add Record</button>
+            </form>
         </div>
     )
 }

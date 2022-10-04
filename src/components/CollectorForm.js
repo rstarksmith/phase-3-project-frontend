@@ -3,7 +3,6 @@ import { useState } from 'react'
 
 const CollectorForm = ({ handleAddCollector }) => {
     const[name, setName] = useState('')
-    // const navigation = useNavigation()
 
     const addCollector = (e) => {
         e.preventDefault()
@@ -37,7 +36,7 @@ const CollectorForm = ({ handleAddCollector }) => {
                     />
                     <button className='bttn' type='submit'>Create new account</button>
                 </form>
-                <p>Once you create your account click on your name to add records</p>
+                <p>Once you create your account, click on your name below to add records.</p>
             </div>
 
         

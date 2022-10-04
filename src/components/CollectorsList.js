@@ -5,7 +5,6 @@ import CollectorForm from "./CollectorForm"
 
 const CollectorsList = ({ collectors, handleAddCollector }) => {
     const [showForm, setShowForm] = useState(false)
-    // const [theCollector, setTheCollector] = useState({})
     const navigate = useNavigate()
 
 
