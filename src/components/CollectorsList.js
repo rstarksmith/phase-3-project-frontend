@@ -12,7 +12,7 @@ const CollectorsList = ({ collectors, handleAddCollector }) => {
     const collections = collectors.map(collector => {
         return(
             <div key={collector.id}>
-                <button onClick={() => navigate(`/collectors/${collector.id}`)} className="card-bttn">{collector.name}</button>
+                <button onClick={() => navigate(`/collectors/${collector.id}`)} className="collector-bttn">{collector.name}</button>
             </div>
             )
         })

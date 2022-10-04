@@ -1,49 +1,52 @@
 import { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
 import Record from "./Record"
 import RecordForm from './RecordForm'
 
-const CollectorPage = () => {
+const CollectorPage = ({ handleDelete }) => {
     const[recordForm, setRecordForm] = useState(false)
     const[collector, setCollector] = useState({})
     const { id } = useParams()
+    const navigate = useNavigate()
 
     useEffect(() => {
         fetch(`http://localhost:9292/collectors/${id}`)
         .then(resp => resp.json())
         .then(data => setCollector(data))
     }, [])
-    
+
+    const removeCollection = () => {
+        fetch(`http://localhost:9292/collectors/${id}`, {
+            method: 'DELETE'
+        })
+        handleDelete(id)
+        navigate('/collectors')     
+    }
     
     const showRecordForm = () => {
         setRecordForm(true)
     }
     
     if (!collector.name) { 
-        return <p>loading...</p>
+        return <h2>Loading...</h2>
     }
 
     const records = collector.records.map(record => <Record record={record} />)
 
     return (
         
-        <div>
+        <div className='collection-container'>
             <h2>{collector.name}</h2>
             <div>
                 {recordForm ? <RecordForm /> : <button onClick={showRecordForm} className="bttn">Add Record</button>}
             </div>
-            <div>
+            <div className='card-container'>
                 {records}
             </div>
-
-            <button className='bttn'>Delete Collection</button>
+            <button className='bttn' onClick={removeCollection}>Delete Collection</button>
         </div>
     )
 }
 
 export default CollectorPage
 
-
-// const displayRecords = collectors.map(collector => {
-    //     return(records.map(record => <Record key={record.id} record={record} />)
-    //     )})

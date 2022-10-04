@@ -8,6 +8,7 @@ import VinylGrade from "./components/VinylGrade"
 
 function App() {
   const [collectors, setCollectors] = useState([])
+  
 
   useEffect(() => {
       fetch('http://localhost:9292/collectors')
@@ -19,6 +20,12 @@ function App() {
         setCollectors([...collectors, newCollector])
     }
 
+  const handleDelete = (id) => {
+    const updatedCollectors = collectors.filter(collector => collector.id !== id)
+      setCollectors(updatedCollectors)
+      
+  }
+
 
   return (
     <>
@@ -26,7 +33,7 @@ function App() {
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route path="/collectors" element={<CollectorList collectors={collectors} handleAddCollector={handleAddCollector} />} />
-        <Route path="/collectors/:id" element={<CollectorPage collectors={collectors} />} />
+        <Route path="/collectors/:id" element={<CollectorPage handleDelete={handleDelete} />} />
         <Route path="/vinylgrade" element={<VinylGrade />} />
       </Routes>
     </>
