@@ -2,7 +2,9 @@ import { useState } from "react"
 
 
 const RecordForm = () => {
-    const[artist, setArtist] = useState('')
+    const[formData, setFormData] = useState({
+        }
+    )
 
     
     return (
@@ -46,7 +48,8 @@ const RecordForm = () => {
                 /><br/><br/> */}
                 {/* <select onChange={(e) => setMedia(e.target.value)}> */}
                     {/* <option>Mint (M)</option>
-                    <option>Near Mine (NM)</option>
+                    <option>Near Mint (NM)</option>
+                    <option>Excellent (E)</option>
                     <option>Very Good Plus (VG+)</option>
                     <option>Very Good (VG)</option>
                     <option>Good (G)</option>

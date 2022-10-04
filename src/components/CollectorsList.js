@@ -1,16 +1,18 @@
 import { useState } from "react"
+import { useNavigate } from "react-router-dom"
 import CollectorForm from "./CollectorForm"
+
 
 const CollectorsList = ({ collectors, handleAddCollector }) => {
     const [showForm, setShowForm] = useState(false)
     // const [theCollector, setTheCollector] = useState({})
-
+    const navigate = useNavigate()
 
 
     const collections = collectors.map(collector => {
         return(
             <div key={collector.id}>
-                <button className="card-bttn">{collector.name}</button>
+                <button onClick={() => navigate(`/collectors/${collector.id}`)} className="card-bttn">{collector.name}</button>
             </div>
             )
         })
@@ -21,7 +23,6 @@ const CollectorsList = ({ collectors, handleAddCollector }) => {
     return (
         <div>
             <div>
-                {/* <img src=""/> */}
                 <p>an image will go here</p>
             </div>
             <div>

@@ -25,7 +25,7 @@ function App() {
       <NavBar />
       <Routes>
         <Route exact path="/" element={<Home />} />
-        <Route exact path="/collectors" element={<CollectorList collectors={collectors} handleAddCollector={handleAddCollector} />} />
+        <Route path="/collectors" element={<CollectorList collectors={collectors} handleAddCollector={handleAddCollector} />} />
         <Route path="/collectors/:id" element={<CollectorPage collectors={collectors} />} />
         <Route path="/vinylgrade" element={<VinylGrade />} />
       </Routes>
