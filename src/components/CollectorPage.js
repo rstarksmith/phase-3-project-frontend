@@ -6,7 +6,6 @@ import RecordForm from './RecordForm'
 const CollectorPage = ({ handleDelete }) => {
     const[recordForm, setRecordForm] = useState(false)
     const[collector, setCollector] = useState({})
-    // useState({ name: "" , records: [] })
     const { id } = useParams()
     const navigate = useNavigate()
 
@@ -27,12 +26,13 @@ const CollectorPage = ({ handleDelete }) => {
 
     const handleDeleteRecord = (deletedRecord) => {
         const updatedRecords = collector.records.filter(record => record.id !== deletedRecord)
-        setCollector({ ...collector, records: updatedRecords })
+        setCollector((prevState) => ({...prevState, records: updatedRecords }))
     }
+    
 
     const handleAddRecord = (newRecord) => {
-        const addNewRecord = [ ...records, newRecord ]
-        setCollector({ ...collector, addNewRecord })
+        const addNewRecord = [ ...collector.records, newRecord ]
+        setCollector((prevState) => ({...prevState, records: addNewRecord }))
         setRecordForm(false)
     }
 
@@ -45,6 +45,7 @@ const CollectorPage = ({ handleDelete }) => {
     }
 
     const records = collector.records.map(record => <Record record={record} key={record.id} handleDeleteRecord={handleDeleteRecord} />)
+    
 
     return (
         
