@@ -18,7 +18,11 @@ const CollectorsList = ({ collectors, handleAddCollector }) => {
         })
 
     const showCollectorForm = () =>
-        setShowForm(true)               
+        setShowForm(true)        
+        
+    const hideForm = () => {
+        setShowForm(false)
+    }
 
     return (
         <div>
@@ -26,7 +30,7 @@ const CollectorsList = ({ collectors, handleAddCollector }) => {
                 <p>add image and title</p>
             </div>
             <div>
-                {showForm ? <CollectorForm handleAddCollector={handleAddCollector}/> : <button onClick={showCollectorForm} className="bttn">New Collector</button>}
+                {showForm ? <CollectorForm handleAddCollector={handleAddCollector} hideForm={hideForm} /> : <button onClick={showCollectorForm} className="bttn">New Collector</button>}
             </div>
             <div>
                 {collections}

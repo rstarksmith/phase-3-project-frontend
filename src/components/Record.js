@@ -1,6 +1,6 @@
 
 
-const Record = ({ record, handleDeleteRecord }) => {
+const Record = ({ record, handleDeleteRecord, showEditForm}) => {
     const { artist, title, media_condition, sleeve_condition, label, format, year, id, image } = record
 
     const deleteRecord = () => {
@@ -9,6 +9,10 @@ const Record = ({ record, handleDeleteRecord }) => {
         })
         .then(resp => resp.json())
         .then(data => handleDeleteRecord(data.id))
+    }
+    
+    const editRecordInfo = () => {
+        showEditForm(id)
     }
     
 
@@ -24,7 +28,7 @@ const Record = ({ record, handleDeleteRecord }) => {
                 <h6>Label: {label} - Format: {format}</h6>
                 <h6>Year: {year}</h6>
             </div>
-            <button className="record-bttn">Edit</button>
+            <button onClick={editRecordInfo} className="record-bttn">Edit</button>
             <button onClick={deleteRecord} className="record-bttn">Delete</button>
         </div>
     )

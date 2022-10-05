@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-const CollectorForm = ({ handleAddCollector }) => {
+const CollectorForm = ({ handleAddCollector, hideForm }) => {
     const[name, setName] = useState('')
 
     const addCollector = (e) => {
@@ -18,7 +18,7 @@ const CollectorForm = ({ handleAddCollector }) => {
         .then(resp => resp.json())
         .then(newCollector => {
             handleAddCollector(newCollector)
-            setName('')
+            hideForm()
         })
     }
 

@@ -78,7 +78,7 @@ nav a.active {
     display: block;
     width: 100%;
     border: none;
-    background-color: #ede7e0;
+    background-color: rgba(236, 234, 234, 0.943);
     margin: 20px;
     padding: 25px 10px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -113,6 +113,14 @@ nav a.active {
     width: 25%;
 }
 
+.input:hover {
+    border-color: rgb(223, 132, 57);
+    border-style: double;
+}
+
+.input:focus {
+    outline-color: rgb(223, 132, 57);
+}
 .card-container {
     display: flex;
     flex-wrap: wrap;
