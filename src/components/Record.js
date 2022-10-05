@@ -6,7 +6,7 @@ const Record = ({ record, handleDeleteRecord }) => {
     const deleteRecord = () => {
         // I have the the correct record id/returned record
         // backend working, need to filter and change state
-        console.log('before fetch id:', id)
+        // console.log('before fetch id:', id)
         fetch(`http://localhost:9292/records/${id}`, {
             method: 'DELETE'
         })

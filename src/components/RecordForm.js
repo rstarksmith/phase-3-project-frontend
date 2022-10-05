@@ -14,9 +14,25 @@ const RecordForm = ({ collector, handleAddRecord }) => {
         image: ''
     })
 
+    const handleChange = (e) => {
+        const { name, value } = e.target
+        setFormData({ ...formData, [name]: value})
+
+    }
     
     const addRecord = (e) => {
         e.preventDefault()
+        fetch('http://localhost:9292/records', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(formData)
+        })
+        .then(resp => resp.json())
+        .then(data => {
+            handleAddRecord(data)
+        })
     }
 
     
@@ -28,7 +44,7 @@ const RecordForm = ({ collector, handleAddRecord }) => {
                     className="input" 
                     name="artist"
                     type="text" 
-                    onChange={(e) => setFormData(e.target.value)} 
+                    onChange={handleChange} 
                     value={formData.artist} 
                     placeholder="Artist..." 
                 /><br/>
@@ -36,7 +52,7 @@ const RecordForm = ({ collector, handleAddRecord }) => {
                     className="input"  
                     name="title"
                     type="text" 
-                    onChange={(e) => setFormData(e.target.value)} 
+                    onChange={handleChange} 
                     value={formData.title} 
                     placeholder="Title..." 
                 /><br/>
@@ -44,7 +60,7 @@ const RecordForm = ({ collector, handleAddRecord }) => {
                     className="input"  
                     name="image"
                     type="text" 
-                    onChange={(e) => setFormData(e.target.value)} 
+                    onChange={handleChange} 
                     value={formData.image} 
                     placeholder="Image URL..." 
                 /><br/>
@@ -52,7 +68,7 @@ const RecordForm = ({ collector, handleAddRecord }) => {
                     className="input"  
                     name="label"
                     type="text" 
-                    onChange={(e) => setFormData(e.target.value)} 
+                    onChange={handleChange} 
                     value={formData.label}
                     placeholder="Label..." 
                 /><br/>
@@ -60,7 +76,7 @@ const RecordForm = ({ collector, handleAddRecord }) => {
                     className="input"  
                     name="year"
                     type="text" 
-                    onChange={(e) => setFormData(e.target.value)} 
+                    onChange={handleChange} 
                     value={formData.year}
                     placeholder="Year..." 
                 /><br/>
@@ -68,7 +84,7 @@ const RecordForm = ({ collector, handleAddRecord }) => {
                 <select 
                     className="input" 
                     name="media_condition"  
-                    onChange={(e) => setFormData(e.target.value)}
+                    onChange={handleChange}
                     value={formData.media_condition}
                 >
                     <option value="Mint (M)">Mint (M)</option>
@@ -84,7 +100,7 @@ const RecordForm = ({ collector, handleAddRecord }) => {
                 <select 
                     className="input" 
                     name="sleeve_condition"
-                    onChange={(e) => setFormData(e.target.value)}
+                    onChange={handleChange}
                     value={formData.sleeve_condition}
                 >
                     <option value="Mint (M)">Mint (M)</option>
@@ -100,7 +116,7 @@ const RecordForm = ({ collector, handleAddRecord }) => {
                 <select
                     className="input"  
                     name="format"
-                    onChange={(e) => setFormData(e.target.value)}
+                    onChange={handleChange}
                     value={formData.format}
                 >
                     <option value="LP">LP</option>

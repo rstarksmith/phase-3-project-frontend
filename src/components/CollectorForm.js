@@ -1,5 +1,4 @@
 import { useState } from 'react'
-// import { useNavigation } from 'react-router-dom'
 
 const CollectorForm = ({ handleAddCollector }) => {
     const[name, setName] = useState('')

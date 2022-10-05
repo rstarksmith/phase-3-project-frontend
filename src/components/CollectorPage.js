@@ -28,11 +28,12 @@ const CollectorPage = ({ handleDelete }) => {
     const handleDeleteRecord = (deletedRecord) => {
         const updatedRecords = collector.records.filter(record => record.id !== deletedRecord)
         setCollector({ ...collector, records: updatedRecords })
-
     }
 
-    const handleAddRecord = () => {
-
+    const handleAddRecord = (newRecord) => {
+        const addNewRecord = [ ...records, newRecord ]
+        setCollector({ ...collector, addNewRecord })
+        setRecordForm(false)
     }
 
     const showRecordForm = () => {
