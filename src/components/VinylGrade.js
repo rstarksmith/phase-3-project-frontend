@@ -3,7 +3,8 @@
 const VinylGrade = () => {
     return (
         <div className="grade-container">
-            <p>add image</p>
+            <img className="list-img" src="https://i.imgur.com/EzW2YJP.png?2" alt="half of a record"/>
+            <h1>Vinyl Grade</h1>
             <h2>How to determine the condition of your record</h2>
                 <p>Mint (M) Absolutely perfect in every way. Never been played and usually sealed.</p>
                 <p>Excellent (E) The vinyl has only been played a few times. There are no marks on the vinyl and the whole package is complete. Small signs of use.</p>

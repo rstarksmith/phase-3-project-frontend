@@ -23,9 +23,8 @@ function App() {
   const handleDelete = (id) => {
     const updatedCollectors = collectors.filter(collector => collector.id !== id)
       setCollectors(updatedCollectors)
-      
   }
-
+  
 
   return (
     <>

@@ -19,15 +19,15 @@ const CollectorPage = ({ handleDelete }) => {
         fetch(`http://localhost:9292/collectors/${id}`, {
             method: 'DELETE'
         })
-        handleDelete(id)
+        .then(resp => resp.json())
+        .then(data => handleDelete(data.id))
         navigate('/collectors')     
     }
 
-    const handleDeleteRecord = () => {
-        fetch(`http://localhost:9292/collectors/${id}`, {
-        })
+    const handleAddRecord = () => {
+
     }
-    
+
     const showRecordForm = () => {
         setRecordForm(true)
     }
@@ -36,14 +36,14 @@ const CollectorPage = ({ handleDelete }) => {
         return <h2>Loading...</h2>
     }
 
-    const records = collector.records.map(record => <Record record={record} />)
+    const records = collector.records.map(record => <Record record={record} key={record.id} />)
 
     return (
         
         <div className='collection-container'>
             <h2>{collector.name}</h2>
             <div>
-                {recordForm ? <RecordForm collector={collector} /> : <button onClick={showRecordForm} className="bttn">Add Record</button>}
+                {recordForm ? <RecordForm collector={collector} handleAddRecord={handleAddRecord} /> : <button onClick={showRecordForm} className="bttn">Add Record</button>}
             </div>
             <div className='card-container'>
                 {records}

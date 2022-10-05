@@ -11,7 +11,8 @@ const CollectorsList = ({ collectors, handleAddCollector }) => {
     const collections = collectors.map(collector => {
         return(
             <div key={collector.id}>
-                <button onClick={() => navigate(`/collectors/${collector.id}`)} className="collector-bttn">{collector.name}</button>
+                <button 
+                    onClick={() => navigate(`/collectors/${collector.id}`)} className="collector-bttn">{collector.name}</button>
             </div>
             )
         })
@@ -22,7 +23,7 @@ const CollectorsList = ({ collectors, handleAddCollector }) => {
     return (
         <div>
             <div>
-                <p>an image will go here</p>
+                <p>add image and title</p>
             </div>
             <div>
                 {showForm ? <CollectorForm handleAddCollector={handleAddCollector}/> : <button onClick={showCollectorForm} className="bttn">New Collector</button>}

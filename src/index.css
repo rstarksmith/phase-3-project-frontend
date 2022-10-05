@@ -48,6 +48,14 @@ nav a.active {
 
 /* CollectorList*/
 
+.list-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    width: 500px;
+}
+
 .bttn {
     background-color: rgb(0, 0, 0);
     border-radius: 5px;
@@ -88,6 +96,11 @@ nav a.active {
     margin: 15px;
     padding: 15px; */
 }
+.collector-bttn:hover {
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+    transition: .7s;
+}
 
 
 /* CollectorForm */
@@ -95,6 +108,7 @@ nav a.active {
     border-radius: 5px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 16px;
+    margin: 8px;
     padding: 10px;
     width: 25%;
 }
