@@ -5,7 +5,11 @@ body {
 
 /* Home */
 .home-img {
-    width: 800px;
+    width: 100%;
+}
+
+.home-logo {
+    width: 300px;
 }
 
 /* NavBar*/

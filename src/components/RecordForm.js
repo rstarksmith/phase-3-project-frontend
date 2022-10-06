@@ -33,7 +33,6 @@ const RecordForm = ({ collector, handleAddRecord }) => {
             handleAddRecord(data)
         })
     }
-
     
     return (
         <div>
@@ -56,7 +55,7 @@ const RecordForm = ({ collector, handleAddRecord }) => {
                     placeholder="Title..." 
                 /><br/>
                 <input 
-                    className="input"  
+                    className="input" 
                     name="image"
                     type="text" 
                     onChange={handleChange} 
