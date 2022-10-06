@@ -9,7 +9,7 @@ const RecordEditForm = ({ recordID, handleUpdateRecord }) => {
     media_condition: "",
     sleeve_condition: "",
     label: "",
-    year: "",
+    year: 0,
     collector_id: 0,
     image: "",
   });

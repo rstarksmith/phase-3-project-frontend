@@ -78,8 +78,7 @@ const RecordForm = ({ collector, handleAddRecord }) => {
           className="input"
           name="year"
           pattern="[0-9]{4}"
-          title="4 digit year: e.g. 2001"
-          required
+          title="4 digit year: e.g. 2001" required
           type="text"
           onChange={handleChange}
           value={formData.year}

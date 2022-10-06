@@ -38,6 +38,10 @@ const VinylGrade = () => {
           repeating. The record itself is cracked, badly warped and has deep
           scratches.
         </p>
+        <p>
+          Still not sure? Check out Record Collector Magazine, an online resource
+          for collectors.
+        </p>
       </div>
       <div>
         <img

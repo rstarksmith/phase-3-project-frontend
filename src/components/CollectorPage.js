@@ -50,6 +50,7 @@ const CollectorPage = ({ handleDelete }) => {
     });
     setCollector((prevState) => ({ ...prevState, records: editedRecords }));
     setEditForm(false);
+    window.scrollTo(0, 350);
   };
 
   const showEditForm = (editedRecordID) => {
@@ -59,7 +60,7 @@ const CollectorPage = ({ handleDelete }) => {
 
   const showRecordForm = () => {
     setRecordForm(true);
-    window.scrollTo(0, 500);
+    window.scrollTo(0, 300);
   };
 
   if (!collector.name) {
