@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 
 const RecordEditForm = ({ recordID, handleUpdateRecord  }) => {
     // can I leave out the collector id because it wont change?
+    // for the year, setting state ... want to show placholder "year"
     const[editFormData, setEditFormData] = useState({
         artist: '',
         title: '',
@@ -75,15 +76,16 @@ const RecordEditForm = ({ recordID, handleUpdateRecord  }) => {
                     value={editFormData.label}
                     placeholder="Label..." 
                 /><br />
+                <label>Year: </label>
                 <input 
                     className="input" 
                     pattern="[0-9]{4}" 
-                    title="4 digit number: e.g. 1234" required
+                    title="4 digit year: e.g. 2001" required
                     name="year" 
                     type="text" 
                     onChange={handleEditChange} 
                     value={editFormData.year}
-                    placeholder="Year..." 
+                    placeholder="1983..." 
                 /><br />
                 <label>Media Condition: </label>
                 <select className="input" name="media_condition" onChange={handleEditChange} value={editFormData.media_condition}>

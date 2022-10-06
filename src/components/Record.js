@@ -16,7 +16,6 @@ const Record = ({ record, handleDeleteRecord, showEditForm}) => {
         window.scrollTo(0,0)
     }
     
-
     return (
         <div className="card">
             <div className="image-container" >

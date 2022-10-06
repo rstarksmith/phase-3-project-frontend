@@ -17,7 +17,6 @@ const RecordForm = ({ collector, handleAddRecord }) => {
     const handleChange = (e) => {
         const { name, value } = e.target
         setFormData({ ...formData, [name]: value})
-
     }
     
     const addRecord = (e) => {
@@ -72,15 +71,16 @@ const RecordForm = ({ collector, handleAddRecord }) => {
                     value={formData.label}
                     placeholder="Label..." 
                 /><br/>
+                <label>Year: </label>
                 <input 
                     className="input"  
                     name="year"
                     pattern="[0-9]{4}" 
-                    title="4 digit number: e.g. 1234" required
+                    title="4 digit year: e.g. 2001" required
                     type="text" 
                     onChange={handleChange} 
                     value={formData.year}
-                    placeholder="Year..." 
+                    placeholder="1983..." 
                 /><br/>
                 <label>Media Condition: </label>
                 <select 
@@ -134,3 +134,4 @@ const RecordForm = ({ collector, handleAddRecord }) => {
 }
 
 export default RecordForm
+
