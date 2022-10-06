@@ -24,8 +24,7 @@ const CollectorForm = ({ handleAddCollector, hideForm }) => {
 
     return (
         <div>
-            <h3>Personal Collections</h3>
-            <div>
+            <div className='collect-form'>
                 <form onSubmit={addCollector}>
                     <input
                         className='input'
@@ -35,10 +34,8 @@ const CollectorForm = ({ handleAddCollector, hideForm }) => {
                     />
                     <button className='bttn' type='submit'>Create new account</button>
                 </form>
-                <p>Once you create your account, click on your name below to add records.</p>
-            </div>
-
-        
+                <h4>Once you create your account, click on your name below to add records.</h4>
+            </div>     
         </div>
     )
 }

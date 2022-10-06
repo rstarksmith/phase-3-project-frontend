@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react'
 
 const RecordEditForm = ({ recordID, handleUpdateRecord  }) => {
-
     // can I leave out the collector id because it wont change?
     const[editFormData, setEditFormData] = useState({
         artist: '',
@@ -21,14 +20,12 @@ const RecordEditForm = ({ recordID, handleUpdateRecord  }) => {
         .then(data => setEditFormData(data))
     }, [recordID])
     
-    // done - capture change in state/ edits
     // should I be using the previous state here?
     const handleEditChange = (e) => {
         const { name, value } = e.target
         setEditFormData({ ...editFormData, [name]: value})
     }
     
-    // use callback to send edit to change state
     const editRecord = (e) => {
         e.preventDefault()
         fetch(`http://localhost:9292/records/${recordID}`, {
@@ -39,11 +36,8 @@ const RecordEditForm = ({ recordID, handleUpdateRecord  }) => {
             body: JSON.stringify(editFormData)
         })
         .then(resp => resp.json())
-        .then(data => {
-            handleUpdateRecord(data)
-        })
+        .then(data => handleUpdateRecord(data))
     }
-    
     
     return (
         <div>
@@ -83,6 +77,8 @@ const RecordEditForm = ({ recordID, handleUpdateRecord  }) => {
                 /><br />
                 <input 
                     className="input" 
+                    pattern="[0-9]{4}" 
+                    title="4 digit number: e.g. 1234" required
                     name="year" 
                     type="text" 
                     onChange={handleEditChange} 
@@ -119,7 +115,7 @@ const RecordEditForm = ({ recordID, handleUpdateRecord  }) => {
                     <option value="12 inch">12 inch</option>
                 </select>
                 <br /><br />
-                <button className='bttn' type="submit">Edit Record</button>
+                <button className='bttn' type="submit">Update Record</button>
             </form>
         </div>
         )

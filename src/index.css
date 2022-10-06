@@ -3,6 +3,11 @@ body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+/* Home */
+.home-img {
+    width: 800px;
+}
+
 /* NavBar*/
 .navbar {
     align-items: center;
@@ -48,38 +53,42 @@ nav a.active {
 
 /* CollectorList*/
 
+
 .list-img {
     display: block;
     margin-left: auto;
     margin-right: auto;
     margin-top: 20px;
-    width: 500px;
+    margin-bottom: 40px;
+    width: 400px;
 }
 
-.bttn {
+.list-bttn {
     background-color: rgb(0, 0, 0);
+    border-width: 1px;
     border-radius: 5px;
     color:rgb(255, 255, 255);
+    display: block;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;  
     font-size: 16px;
+    margin:auto;
     padding: 10px;
 }
 
-.bttn:hover {
+.list-bttn:hover {
     background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
     cursor: pointer;
     transition: .7s;   
 }
 
-
-/* Collectorbttn*/
 .collector-bttn {
     display: block;
-    width: 100%;
+    width: 90%;
     border: none;
     background-color: rgba(236, 234, 234, 0.943);
-    margin: 20px;
+    margin: auto;
+    margin-top: 30px;
     padding: 25px 10px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 18px;
@@ -100,6 +109,10 @@ nav a.active {
     background-color: rgb(255, 255, 255);
     cursor: pointer;
     transition: .7s;
+}
+
+.collect-form {
+    
 }
 
 
@@ -127,6 +140,13 @@ nav a.active {
     padding: 30px
 }
 
+/* CollectorPage */
+
+.collect-name {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+    font-weight: lighter;
+    text-align: center;
+}
 
 /* Record */
 .card {
@@ -148,11 +168,12 @@ nav a.active {
 }
 
 .image-container {
-    height: 350px
+    height: 350px;
 }
 
 .record-bttn {
     background-color: rgb(0, 0, 0);
+    border-width: 1px;
     border-radius: 5px;
     color: rgb(255, 255, 255);
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -162,6 +183,26 @@ nav a.active {
 }
     
 .record-bttn:hover {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    transition: .7s;
+}
+
+
+
+
+.bttn {
+    background-color: rgb(0, 0, 0);
+    border-width: 1px;
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    padding: 10px;
+}
+
+.bttn:hover {
     background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
     cursor: pointer;

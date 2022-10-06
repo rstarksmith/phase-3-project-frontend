@@ -50,30 +50,38 @@ const CollectorPage = ({ handleDelete }) => {
         setEditForm(false)
     }
 
-    // captured edit record id
     const showEditForm = (editedRecordID) => {
         setEditForm(true)
         setRecordID(editedRecordID)
     }
     
-
     const showRecordForm = () => {
         setRecordForm(true)
+        window.scrollTo(0,500)  
     }
     
     if (!collector.name) { 
         return <h2>Loading...</h2>
     }
 
-    const records = collector.records.map(record => <Record record={record} key={record.id} handleDeleteRecord={handleDeleteRecord} showEditForm={showEditForm}/>)
-    
+    // proper format?
+    const records = collector.records.map(record => 
+        <Record 
+            record={record} 
+            key={record.id} 
+            handleDeleteRecord={handleDeleteRecord} 
+            showEditForm={showEditForm}
+        />
+    )
+
     return (
-        
         <div className='collection-container'>
             <div>
-                {editForm ? <RecordEditForm recordID={recordID} handleUpdateRecord={handleUpdateRecord} /> : <img src=' ' alt='records'/>}
+                {editForm ? <RecordEditForm recordID={recordID} handleUpdateRecord={handleUpdateRecord} /> : <img className="list-img" src="https://i.imgur.com/cChA95R.png" alt="three records"/>}
             </div>
-            <h2>{collector.name}</h2>
+            <div>
+                <h1 className='collect-name'>{collector.name}</h1>
+            </div>
             <div>
                 {recordForm ? <RecordForm collector={collector} handleAddRecord={handleAddRecord} /> : <button onClick={showRecordForm} className="bttn">Add Record</button>}
             </div>

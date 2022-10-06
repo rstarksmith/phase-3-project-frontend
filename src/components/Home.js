@@ -3,8 +3,13 @@ const Home = () => {
     
     return (
         <div>
-            Home
-            <p>add image</p>
+            <div>
+                <img
+                    className="list-img"
+                    src="https://i.imgur.com/b4udXVW.png"
+                    alt="Fox Vinyl Record Collections Logo with records"
+                />
+            </div>
             <p>icons/quote</p>
         </div>
     )

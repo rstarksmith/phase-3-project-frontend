@@ -14,11 +14,12 @@ const CollectorsList = ({ collectors, handleAddCollector }) => {
                 <button 
                     onClick={() => navigate(`/collectors/${collector.id}`)} className="collector-bttn">{collector.name}</button>
             </div>
-            )
-        })
+        )
+    })
 
-    const showCollectorForm = () =>
-        setShowForm(true)        
+    const showCollectorForm = () => {
+        setShowForm(true)
+    }      
         
     const hideForm = () => {
         setShowForm(false)
@@ -27,10 +28,14 @@ const CollectorsList = ({ collectors, handleAddCollector }) => {
     return (
         <div>
             <div>
-                <p>add image and title</p>
+                <img 
+                    className="list-img"
+                    src="https://i.imgur.com/6Tvi215.png" 
+                    alt="Record collections fox vinyl"
+                />
             </div>
             <div>
-                {showForm ? <CollectorForm handleAddCollector={handleAddCollector} hideForm={hideForm} /> : <button onClick={showCollectorForm} className="bttn">New Collector</button>}
+                {showForm ? <CollectorForm handleAddCollector={handleAddCollector} hideForm={hideForm} /> : <button onClick={showCollectorForm} className="list-bttn">New Collector</button>}
             </div>
             <div>
                 {collections}

@@ -13,6 +13,7 @@ const Record = ({ record, handleDeleteRecord, showEditForm}) => {
     
     const editRecordInfo = () => {
         showEditForm(id)
+        window.scrollTo(0,0)
     }
     
 
