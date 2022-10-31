@@ -45,6 +45,7 @@ const VinylGrade = () => {
       </div>
       <div>
         <img
+          className="grade-img"
           src="https://i.imgur.com/EzW2YJP.png?2"
           alt="half of a large record"
         />

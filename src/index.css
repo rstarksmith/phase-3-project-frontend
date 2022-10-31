@@ -217,6 +217,11 @@ nav a.active {
     text-align: center;
 }
 
+.grade-img{
+    display:block;
+    margin: auto;
+}
+
 .grade-container {
     display: block;
     margin-right: 100px;
