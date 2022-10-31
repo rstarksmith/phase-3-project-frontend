@@ -8,28 +8,38 @@ Fox Vinyl Record Collections helps the user keep track of their collection inven
 * Must use phase-3-project-backend repository on GitHub.
     `https://github.com/rstarksmith/phase-3-project-backend`
 
-### Installation
+## Installation - Frontend
 - Fork and clone phase-3-project-frontend -
     `https://github.com/rstarksmith/phase-3-project-frontend`
-- Open frontend project, run *npm install* 
+- Open project, run `npm install`
+- Run `npm start`
+
+## Installation - Backend
 - Fork and clone phase-3-project-backend -  
     `https://github.com/rstarksmith/phase-3-project-backend`
-- Open backend project, run *bundle install*
-- Backend, run *bundle exec rake db:migrate*
-- Backend, run *bundle exec rake db:seed*
-- Backend, run *bundle exec rake server*
-- Frontend, run *npm start*
+- Open project, run `bundle install`
+- Run `bundle exec rake db:migrate`
+- Run `bundle exec rake db:seed`
+- Start server:
+```console
+$ bundle exec rake server
+```
+
 
 Frontend, open `http://localhost:3000` to view it in your browser
 
 Backend, open `http://localhost:9292/collectors` to view data in your browser
 
-### Resources
-- Photos of general records sourced from Canva -  `https://www.canva.com/`
-- Record images sourced from Discogs - `https://www.discogs.com/`
-- Grading information sourced from Record Collector - `https://recordcollectormag.com/`
+## Resources
+- Photos of general records sourced from - [Canva] 
+- Record images sourced from - [Discogs]
+- Grading information sourced from - [Record Collector Magazine]
 
 
+[Canva]: https://www.canva.com/
+[Discogs]: https://www.discogs.com/
+[Record Collector Magazine]: https://recordcollectormag.com/
+[]
 
 
 
