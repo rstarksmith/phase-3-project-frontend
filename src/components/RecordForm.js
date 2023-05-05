@@ -34,12 +34,13 @@ const RecordForm = ({ collector, handleAddRecord }) => {
   };
 
   return (
-    <div>
+    <div className="collect-form">
       <p>Add a record to your collection: </p>
       <form onSubmit={addRecord}>
         <input
           className="input"
           name="artist"
+          autoComplete="off"
           type="text"
           onChange={handleChange}
           value={formData.artist}
@@ -49,6 +50,7 @@ const RecordForm = ({ collector, handleAddRecord }) => {
         <input
           className="input"
           name="title"
+          autoComplete="off"
           type="text"
           onChange={handleChange}
           value={formData.title}
@@ -58,6 +60,7 @@ const RecordForm = ({ collector, handleAddRecord }) => {
         <input
           className="input"
           name="image"
+          autoComplete="off"
           type="text"
           onChange={handleChange}
           value={formData.image}
@@ -67,6 +70,7 @@ const RecordForm = ({ collector, handleAddRecord }) => {
         <input
           className="input"
           name="label"
+          autoComplete="off"
           type="text"
           onChange={handleChange}
           value={formData.label}
@@ -77,8 +81,10 @@ const RecordForm = ({ collector, handleAddRecord }) => {
         <input
           className="input"
           name="year"
+          autoComplete="off"
           pattern="[0-9]{4}"
-          title="4 digit year: e.g. 2001" required
+          title="4 digit year: e.g. 2001"
+          required
           type="text"
           onChange={handleChange}
           value={formData.year}

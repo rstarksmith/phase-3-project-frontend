@@ -18,6 +18,9 @@ const CollectorPage = ({ handleDelete }) => {
       .then((data) => setCollector(data));
   }, [id]);
 
+  // const currentCollector = collectors.find((c) => c.id === +id);
+  // setCollector(currentCollector);
+
   const removeCollection = () => {
     fetch(`http://localhost:9292/collectors/${id}`, {
       method: "DELETE",

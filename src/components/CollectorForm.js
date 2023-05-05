@@ -30,13 +30,14 @@ const CollectorForm = ({ handleAddCollector, hideForm }) => {
             className="input"
             onChange={(e) => setName(e.target.value)}
             value={name}
+            autoComplete="off"
             placeholder="Name..."
           />
           <button className="bttn" type="submit">
             Create new account
           </button>
         </form>
-        <h4>
+        <h4 className="collect-txt">
           Once you create your account, click on your name below to add records.
         </h4>
       </div>

@@ -17,7 +17,7 @@ function App() {
   }, [])
 
   const handleAddCollector = (newCollector) => {
-        setCollectors([...collectors, newCollector])
+        setCollectors([newCollector, ...collectors])
     }
 
   const handleDelete = (id) => {

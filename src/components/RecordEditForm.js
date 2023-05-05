@@ -40,12 +40,13 @@ const RecordEditForm = ({ recordID, handleUpdateRecord }) => {
   };
 
   return (
-    <div>
+    <div className="collect-form">
       <h3>Update record: </h3>
       <form onSubmit={editRecord}>
         <input
           className="input"
           name="artist"
+          autoComplete="off"
           type="text"
           onChange={handleEditChange}
           value={editFormData.artist}
@@ -55,6 +56,7 @@ const RecordEditForm = ({ recordID, handleUpdateRecord }) => {
         <input
           className="input"
           name="title"
+          autoComplete="off"
           type="text"
           onChange={handleEditChange}
           value={editFormData.title}
@@ -64,6 +66,7 @@ const RecordEditForm = ({ recordID, handleUpdateRecord }) => {
         <input
           className="input"
           name="image"
+          autoComplete="off"
           type="text"
           onChange={handleEditChange}
           value={editFormData.image}
@@ -73,6 +76,7 @@ const RecordEditForm = ({ recordID, handleUpdateRecord }) => {
         <input
           className="input"
           name="label"
+          autoComplete="off"
           type="text"
           onChange={handleEditChange}
           value={editFormData.label}
@@ -86,6 +90,7 @@ const RecordEditForm = ({ recordID, handleUpdateRecord }) => {
           title="4 digit year: e.g. 2001"
           required
           name="year"
+          autoComplete="off"
           type="text"
           onChange={handleEditChange}
           value={editFormData.year}

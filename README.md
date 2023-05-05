@@ -1,3 +1,5 @@
+<a href="https://imgur.com/cChA95R"><img src="https://i.imgur.com/cChA95R.png" title="source: imgur.com" /></a>
+
 # Fox Vinyl Record Collections
 Fox Vinyl Record Collections helps the user keep track of their collection inventory and allows them to share their collection. User can browse other collectors inventory. 
 
@@ -39,7 +41,7 @@ Backend, open `http://localhost:9292/collectors` to view data in your browser
 [Canva]: https://www.canva.com/
 [Discogs]: https://www.discogs.com/
 [Record Collector Magazine]: https://recordcollectormag.com/
-[]
+
 
 
 

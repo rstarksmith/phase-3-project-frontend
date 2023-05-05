@@ -2,3 +2,5 @@
 - Refactor RecordEditForm
 - Add filters or search options
 - Add user/password auth
+
+- Reactor selector
